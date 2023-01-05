@@ -2,8 +2,8 @@ console.log(
     "Section 2: Assignment for Lecture 10. Values and Variables starts here"
 );
 
-const country = "Latvia";
-const continent = "Eurasia";
+country = "Latvia";
+continent = "Eurasia";
 let population = "1 500 000";
 
 console.log(country);
@@ -35,3 +35,33 @@ language = "Latvian";
 console.log(
     "Section 2: Assignment for Lecture 13. let, const and var ends here"
 );
+
+console.log(
+    "Section 2: Assignment for Lecture 14. Basic Operators starts here"
+);
+
+population = 1500000;
+console.log(population / 2);
+console.log(population / 2 + 1);
+populationFinland = 6000000;
+console.log(population > populationFinland);
+averagePopulationOfACountry = 33000000;
+console.log(population < averagePopulationOfACountry);
+
+country = "Portugal";
+continent = "Europe";
+population = 11;
+language = "portuguese";
+
+const description =
+    country +
+    " is in " +
+    continent +
+    ", and its " +
+    population +
+    " million people speak " +
+    language;
+
+console.log(description);
+
+console.log("Section 2: Assignment for Lecture 14. Basic Operators ends here");
