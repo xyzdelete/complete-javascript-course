@@ -2,8 +2,8 @@ console.log(
     "Section 2: Assignment for Lecture 10. Values and Variables starts here"
 );
 
-let country = "Latvia";
-let continent = "Eurasia";
+const country = "Latvia";
+const continent = "Eurasia";
 let population = "1 500 000";
 
 console.log(country);
@@ -16,7 +16,7 @@ console.log(
 
 console.log("Section 2: Assignment for Lecture 12. Data Types starts here");
 
-let isIsLand = true;
+const isIsLand = true;
 let language;
 
 console.log(isIsLand);
@@ -25,3 +25,13 @@ console.log(country);
 console.log(language);
 
 console.log("Section 2: Assignment for Lecture 12. Data Types ends here");
+
+console.log(
+    "Section 2: Assignment for Lecture 13. let, const and var starts here"
+);
+
+language = "Latvian";
+
+console.log(
+    "Section 2: Assignment for Lecture 13. let, const and var ends here"
+);
