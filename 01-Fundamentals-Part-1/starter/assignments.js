@@ -65,3 +65,20 @@
 // console.log(description);
 
 // console.log("Section 2: Assignment for Lecture 14. Basic Operators ends here");
+
+console.log(
+    "Section 2: Assignment for Lecture 17. Strings and Template Literals starts here"
+);
+
+country = "Portugal";
+continent = "Europe";
+population = 11;
+language = "portuguese";
+
+const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+
+console.log(description);
+
+console.log(
+    "Section 2: Assignment for Lecture 17. Strings and Template Literals ends here"
+);

@@ -113,3 +113,36 @@
 // console.log(ageArturs, ageSarah, averageAge);
 
 // console.log("Section 2: Lecture 15. Operator Precedence ends here");
+
+// console.log("Section 2: Lecture 17. Strings and Template Literals starts here");
+
+// const firstName = "Arturs";
+// const job = "programmer";
+// const birthYear = 2000;
+// const year = 2037;
+
+// const arturs =
+//     "I'm " +
+//     firstName +
+//     ", a " +
+//     (year - birthYear) +
+//     " years old " +
+//     job +
+//     "!";
+// console.log(arturs);
+
+// const artursNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+// console.log(artursNew);
+
+// console.log(`Just a regular string...`);
+// console.log(
+//     "String with \n\
+// multiple \n\
+// lines"
+// );
+
+// console.log(`String
+// multiple
+// lines`);
+
+// console.log("Section 2: Lecture 17. Strings and Template Literals ends here");

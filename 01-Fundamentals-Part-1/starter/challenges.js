@@ -1,23 +1,23 @@
-console.log("Section 2: Lecture 16. Coding Challenge #1 starts here");
+// console.log("Section 2: Lecture 16. Coding Challenge #1 starts here");
 
-// Data1
-// const markMass = 78;
-// const markHeight = 1.69;
-// const johnMass = 92;
-// const johnHeight = 1.95;
+// // Data1
+// // const markMass = 78;
+// // const markHeight = 1.69;
+// // const johnMass = 92;
+// // const johnHeight = 1.95;
 
-// Data2
-const markMass = 95;
-const markHeight = 1.88;
-const johnMass = 85;
-const johnHeight = 1.76;
+// // Data2
+// const markMass = 95;
+// const markHeight = 1.88;
+// const johnMass = 85;
+// const johnHeight = 1.76;
 
-const markBMI = markMass / markHeight ** 2;
+// const markBMI = markMass / markHeight ** 2;
 
-const johnBMI = johnMass / (johnHeight * johnHeight);
+// const johnBMI = johnMass / (johnHeight * johnHeight);
 
-const markHigherBMI = markBMI > johnBMI;
+// const markHigherBMI = markBMI > johnBMI;
 
-console.log(markHigherBMI);
+// console.log(markHigherBMI);
 
-console.log("Section 2: Lecture 16. Coding Challenge #1 ends here");
+// console.log("Section 2: Lecture 16. Coding Challenge #1 ends here");
