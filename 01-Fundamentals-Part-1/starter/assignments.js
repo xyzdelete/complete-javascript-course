@@ -83,25 +83,25 @@
 //     "Section 2: Assignment for Lecture 17. Strings and Template Literals ends here"
 // );
 
-console.log(
-    "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements starts here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements starts here"
+// );
 
-const population = 34;
-// const population = 11;
-// const population = 13;
-// const population = 130;
+// const population = 34;
+// // const population = 11;
+// // const population = 13;
+// // const population = 130;
 
-const country = "Portugal";
+// const country = "Portugal";
 
-if (population > 33) {
-    console.log(`${country}'s population is above average`);
-} else {
-    console.log(
-        `${country}'s population is ${33 - population} million below average`
-    );
-}
+// if (population > 33) {
+//     console.log(`${country}'s population is above average`);
+// } else {
+//     console.log(
+//         `${country}'s population is ${33 - population} million below average`
+//     );
+// }
 
-console.log(
-    "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements ends here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements ends here"
+// );
