@@ -106,16 +106,16 @@
 //     "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements ends here"
 // );
 
-console.log(
-    "Section 2: Assignment for Lecture 20. Type Conversion and Coercion starts here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 20. Type Conversion and Coercion starts here"
+// );
 
-console.log("9" - "5");
-console.log("19" - "13" + "17");
-console.log("19" - "13" + 17);
-console.log("123" < 57);
-console.log(5 + 6 + "4" + 9 - 4 - 2);
+// console.log("9" - "5");
+// console.log("19" - "13" + "17");
+// console.log("19" - "13" + 17);
+// console.log("123" < 57);
+// console.log(5 + 6 + "4" + 9 - 4 - 2);
 
-console.log(
-    "Section 2: Assignment for Lecture 20. Type Conversion and Coercion ends here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 20. Type Conversion and Coercion ends here"
+// );
