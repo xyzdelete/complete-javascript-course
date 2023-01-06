@@ -254,3 +254,32 @@
 // if (favorite !== 23) console.log("Why not 23?");
 
 // console.log("Section 2: Lecture 22. Equality Operators: == vs. === ends here");
+
+// console.log("Section 2: Lecture 24. Logical Operators starts here");
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// // if (hasDriversLicense && hasGoodVision) {
+// //     console.log("Sarah is able to drive!");
+// // } else {
+// //     console.log("Someone else should drive...");
+// // }
+
+// const isTired = false; // C
+
+// console.log(hasDriversLicense && hasGoodVision && isTired);
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//     console.log("Sarah is able to drive!");
+// } else {
+//     console.log("Someone else should drive...");
+// }
+
+// console.log("Section 2: Lecture 24. Logical Operators ends here");

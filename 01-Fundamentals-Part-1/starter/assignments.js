@@ -120,22 +120,40 @@
 //     "Section 2: Assignment for Lecture 20. Type Conversion and Coercion ends here"
 // );
 
+// console.log(
+//     "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === starts here"
+// );
+
+// const numNeighbours = Number(
+//     prompt(`How many neighbour countries does your country have?`)
+// );
+
+// if (numNeighbours === 1) {
+//     console.log("Only 1 border!");
+// } else if (numNeighbours > 1) {
+//     console.log("More than 1 border");
+// } else {
+//     console.log("No borders");
+// }
+
+// console.log(
+//     "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === ends here"
+// );
+
 console.log(
-    "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === starts here"
+    "Section 2: Assignment for Lecture 24. Logical Operators starts here"
 );
 
-const numNeighbours = Number(
-    prompt(`How many neighbour countries does your country have?`)
-);
+const language = "latvian";
+const people = 1;
+const isIsland = false;
 
-if (numNeighbours === 1) {
-    console.log("Only 1 border!");
-} else if (numNeighbours > 1) {
-    console.log("More than 1 border");
+if (language === "english" && people < 50 && !isIsland) {
+    console.log("You should live in Portugal :)");
 } else {
-    console.log("No borders");
+    console.log("Portugal does not meet your criteria :(");
 }
 
 console.log(
-    "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === ends here"
+    "Section 2: Assignment for Lecture 24. Logical Operators ends here"
 );
