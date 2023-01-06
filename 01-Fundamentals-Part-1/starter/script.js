@@ -199,28 +199,58 @@
 
 // console.log("Section 2: Lecture 20. Type Conversion and Coercion ends here");
 
-console.log("Section 2: Lecture 21. Truthy and Falsy Values starts here");
+// console.log("Section 2: Lecture 21. Truthy and Falsy Values starts here");
 
-// 5 falsy values: 0, '', undefined, null, NaN
+// // 5 falsy values: 0, '', undefined, null, NaN
 
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean("Arturs"));
-console.log(Boolean({}));
-console.log(Boolean(""));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Arturs"));
+// console.log(Boolean({}));
+// console.log(Boolean(""));
 
-const money = 100;
-if (money) {
-    console.log("Don't spend it all");
-} else {
-    console.log("You should get a job!");
-}
+// const money = 100;
+// if (money) {
+//     console.log("Don't spend it all");
+// } else {
+//     console.log("You should get a job!");
+// }
 
-let height = 0;
-if (height) {
-    console.log("Yay! Height is defined");
-} else {
-    console.log("Height is undefined");
-}
+// let height = 0;
+// if (height) {
+//     console.log("Yay! Height is defined");
+// } else {
+//     console.log("Height is undefined");
+// }
 
-console.log("Section 2: Lecture 21. Truthy and Falsy Values ends here");
+// console.log("Section 2: Lecture 21. Truthy and Falsy Values ends here");
+
+// console.log(
+//     "Section 2: Lecture 22. Equality Operators: == vs. === starts here"
+// );
+
+// const age = "18";
+
+// if (age === 18) console.log("You've just become an adult (strict)");
+
+// if (age == 18) console.log("You've just become an adult (loose)");
+
+// const favorite = Number(prompt("What's your favorite number?"));
+
+// console.log(favorite);
+// console.log(typeof favorite);
+
+// if (favorite === 23) {
+//     // 23 === 23
+//     console.log("Cool! 23 is an amazing number!");
+// } else if (favorite === 7) {
+//     console.log("7 is also a cool number");
+// } else if (favorite === 9) {
+//     console.log("9 is also a cool number");
+// } else {
+//     console.log("Number is not 23 or 7 or 9");
+// }
+
+// if (favorite !== 23) console.log("Why not 23?");
+
+// console.log("Section 2: Lecture 22. Equality Operators: == vs. === ends here");

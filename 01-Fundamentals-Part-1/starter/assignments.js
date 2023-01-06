@@ -119,3 +119,23 @@
 // console.log(
 //     "Section 2: Assignment for Lecture 20. Type Conversion and Coercion ends here"
 // );
+
+console.log(
+    "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === starts here"
+);
+
+const numNeighbours = Number(
+    prompt(`How many neighbour countries does your country have?`)
+);
+
+if (numNeighbours === 1) {
+    console.log("Only 1 border!");
+} else if (numNeighbours > 1) {
+    console.log("More than 1 border");
+} else {
+    console.log("No borders");
+}
+
+console.log(
+    "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === ends here"
+);
