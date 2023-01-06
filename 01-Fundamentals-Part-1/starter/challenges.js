@@ -47,3 +47,32 @@
 // }
 
 // console.log("Section 2: Lecture 19. Coding Challenge #2 ends here");
+
+console.log("Section 2: Lecture 25. Coding Challenge #3 starts here");
+
+// Data 1
+// const scoreDolphins = 96 + 108 + 89;
+// const scoreKoalas = 88 + 91 + 110;
+
+// Data Bonus 1
+// const scoreDolphins = 97 + 112 + 101;
+// const scoreKoalas = 109 + 95 + 123;
+// Data Bonus 2
+const scoreDolphins = 97 + 112 + 101;
+const scoreKoalas = 109 + 95 + 106;
+
+const averageScoreDolphins = scoreDolphins / 3;
+const averageScoreKoalas = scoreKoalas / 3;
+
+if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
+    console.log("Dolphins team is the winner!");
+} else if (
+    averageScoreKoalas > averageScoreDolphins &&
+    averageScoreKoalas >= 100
+) {
+    console.log("Koalas team is the winner!");
+} else if (averageScoreKoalas >= 100 && averageScoreDolphins >= 100) {
+    console.log("It's a draw!");
+}
+
+console.log("Section 2: Lecture 25. Coding Challenge #3 ends here");

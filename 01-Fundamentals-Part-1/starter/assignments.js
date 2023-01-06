@@ -140,20 +140,20 @@
 //     "Section 2: Assignment for Lecture 22. Equality Operators: == vs. === ends here"
 // );
 
-console.log(
-    "Section 2: Assignment for Lecture 24. Logical Operators starts here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 24. Logical Operators starts here"
+// );
 
-const language = "latvian";
-const people = 1;
-const isIsland = false;
+// const language = "latvian";
+// const people = 1;
+// const isIsland = false;
 
-if (language === "english" && people < 50 && !isIsland) {
-    console.log("You should live in Portugal :)");
-} else {
-    console.log("Portugal does not meet your criteria :(");
-}
+// if (language === "english" && people < 50 && !isIsland) {
+//     console.log("You should live in Portugal :)");
+// } else {
+//     console.log("Portugal does not meet your criteria :(");
+// }
 
-console.log(
-    "Section 2: Assignment for Lecture 24. Logical Operators ends here"
-);
+// console.log(
+//     "Section 2: Assignment for Lecture 24. Logical Operators ends here"
+// );
