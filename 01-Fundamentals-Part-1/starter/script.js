@@ -146,3 +146,31 @@
 // lines`);
 
 // console.log("Section 2: Lecture 17. Strings and Template Literals ends here");
+
+// console.log(
+//     "Section 2: Lecture 18. Taking Decisions: if / else Statements starts here"
+// );
+
+// const age = 19;
+
+// if (age >= 18) {
+//     console.log("Sarah can start driving license 🚘");
+// } else {
+//     const yearsLeft = 18 - age;
+//     console.log(`Sarah is too young. Wait another ${yearsLeft} years ;)`);
+// }
+
+// const birthYear = 2001;
+// let century;
+
+// if (birthYear <= 2000) {
+//     century = 20;
+// } else {
+//     century = 21;
+// }
+
+// console.log(century);
+
+// console.log(
+//     "Section 2: Lecture 18. Taking Decisions: if / else Statements ends here"
+// );

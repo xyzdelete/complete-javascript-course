@@ -66,19 +66,42 @@
 
 // console.log("Section 2: Assignment for Lecture 14. Basic Operators ends here");
 
+// console.log(
+//     "Section 2: Assignment for Lecture 17. Strings and Template Literals starts here"
+// );
+
+// country = "Portugal";
+// continent = "Europe";
+// population = 11;
+// language = "portuguese";
+
+// const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+
+// console.log(description);
+
+// console.log(
+//     "Section 2: Assignment for Lecture 17. Strings and Template Literals ends here"
+// );
+
 console.log(
-    "Section 2: Assignment for Lecture 17. Strings and Template Literals starts here"
+    "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements starts here"
 );
 
-country = "Portugal";
-continent = "Europe";
-population = 11;
-language = "portuguese";
+const population = 34;
+// const population = 11;
+// const population = 13;
+// const population = 130;
 
-const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+const country = "Portugal";
 
-console.log(description);
+if (population > 33) {
+    console.log(`${country}'s population is above average`);
+} else {
+    console.log(
+        `${country}'s population is ${33 - population} million below average`
+    );
+}
 
 console.log(
-    "Section 2: Assignment for Lecture 17. Strings and Template Literals ends here"
+    "Section 2: Assignment for Lecture 18. Taking Decisions: if / else Statements ends here"
 );
