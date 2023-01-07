@@ -189,3 +189,21 @@
 // console.log(
 //     "Section 2: Assignment for Lecture 26. The switch Statement ends here"
 // );
+
+console.log(
+    "Section 2: Assignment for Lecture 28. The Conditional (Ternary) Operator starts here"
+);
+
+const population = 33;
+
+console.log(
+    `${
+        population > 33
+            ? "Portugal's population is above average."
+            : "Portugal's population is below average."
+    }`
+);
+
+console.log(
+    "Section 2: Assignment for Lecture 28. The Conditional (Ternary) Operator ends here"
+);

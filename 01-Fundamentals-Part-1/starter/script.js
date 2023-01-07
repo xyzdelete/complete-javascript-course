@@ -328,29 +328,29 @@
 
 // console.log("Section 2: Lecture 26. The switch Statement ends here");
 
-console.log(
-    "Section 2: Lecture 28. The Conditional (Ternary) Operator starts here"
-);
+// console.log(
+//     "Section 2: Lecture 28. The Conditional (Ternary) Operator starts here"
+// );
 
-const age = 23;
+// const age = 23;
 
-// age >= 18
-//     ? console.log("I like to drink water")
-//     : console.log("I like to drink tea");
+// // age >= 18
+// //     ? console.log("I like to drink water")
+// //     : console.log("I like to drink tea");
 
-const drink = age >= 18 ? "water" : "tea";
-console.log(drink);
+// const drink = age >= 18 ? "water" : "tea";
+// console.log(drink);
 
-let drink2;
-if (age >= 18) {
-    drink2 = "water";
-} else {
-    drink2 = "tea";
-}
-console.log(drink2);
+// let drink2;
+// if (age >= 18) {
+//     drink2 = "water";
+// } else {
+//     drink2 = "tea";
+// }
+// console.log(drink2);
 
-console.log(`I like to drink ${age >= 18 ? "water" : "tea"}`);
+// console.log(`I like to drink ${age >= 18 ? "water" : "tea"}`);
 
-console.log(
-    "Section 2: Lecture 28. The Conditional (Ternary) Operator ends here"
-);
+// console.log(
+//     "Section 2: Lecture 28. The Conditional (Ternary) Operator ends here"
+// );
