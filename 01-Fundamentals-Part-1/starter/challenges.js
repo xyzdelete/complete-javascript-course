@@ -76,3 +76,19 @@
 // }
 
 // console.log("Section 2: Lecture 25. Coding Challenge #3 ends here");
+
+console.log("Section 2: Lecture 29. Coding Challenge #4 starts here");
+
+// const bill = 275;
+// const bill = 40;
+const bill = 430;
+
+console.log(
+    `Bill value is ${bill}
+Tip value is ${bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2}
+The final value is ${
+        bill + (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2)
+    }`
+);
+
+console.log("Section 2: Lecture 29. Coding Challenge #4 ends here");
