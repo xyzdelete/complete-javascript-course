@@ -46,3 +46,23 @@
 // console.log(
 //     "Section 3: Assignment for Lecture 34. Function Declarations vs. Expressions ends here"
 // );
+
+console.log(
+    "Section 3: Assignment for Lecture 35. Arrow Functions starts here"
+);
+
+const percentageOfWorld3 = (population) => {
+    return (population / 8000000000) * 100;
+};
+
+// const population = 1294919;
+// const population = 2294919;
+const population = 3294919;
+
+const fractionOfWorldPopulation = percentageOfWorld3(population);
+
+console.log(
+    `${population} million people is about ${fractionOfWorldPopulation}`
+);
+
+console.log("Section 3: Assignment for Lecture 35. Arrow Functions ends here");

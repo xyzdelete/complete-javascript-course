@@ -66,21 +66,21 @@
 //     "Section 3: Lecture 34. Function Declarations vs. Expressions ends here"
 // );
 
-console.log("Section 3: Lecture 35. Arrow Functions starts here");
+// console.log("Section 3: Lecture 35. Arrow Functions starts here");
 
-// Arrow function
-const calcAge3 = (birthYear) => 2037 - birthYear;
-const age3 = calcAge3(1991);
-console.log(age3);
+// // Arrow function
+// const calcAge3 = (birthYear) => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-    const age = 2037 - birthYear;
-    const retirement = 65 - age;
-    // return retirement;
-    return `${firstName} retires in ${retirement} years`;
-};
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2037 - birthYear;
+//     const retirement = 65 - age;
+//     // return retirement;
+//     return `${firstName} retires in ${retirement} years`;
+// };
 
-console.log(yearsUntilRetirement(1991, "Arturs"));
-console.log(yearsUntilRetirement(2000, "Arturs"));
+// console.log(yearsUntilRetirement(1991, "Arturs"));
+// console.log(yearsUntilRetirement(2000, "Arturs"));
 
-console.log("Section 3: Lecture 35. Arrow Functions ends here");
+// console.log("Section 3: Lecture 35. Arrow Functions ends here");
