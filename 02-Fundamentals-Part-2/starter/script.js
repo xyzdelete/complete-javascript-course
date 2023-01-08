@@ -215,3 +215,23 @@
 // console.log(
 //     "Section 3: Lecture 40. Basic Array Operations (Methods) ends here"
 // );
+
+console.log("Section 3: Lecture 42. Introduction to Objects starts here");
+
+const artursArray = [
+    "Arturs",
+    "Anikins",
+    2037 - 1991,
+    "programmer",
+    ["Michael", "Peter", "Steven"],
+];
+
+const arturs = {
+    firstName: "Arturs",
+    lastName: "Anikins",
+    age: 2037 - 2000,
+    job: "programmer",
+    friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log("Section 3: Lecture 42. Introduction to Objects ends here");
