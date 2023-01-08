@@ -117,26 +117,26 @@
 //     "Section 3: Assignment for Lecture 39. Introduction to Arrays ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture 40. Basic Array Operations (Methods) starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 40. Basic Array Operations (Methods) starts here"
+// );
 
-const neighbours = ["Belarus", "Estonia", "Lithuania"];
-console.log(neighbours);
+// const neighbours = ["Belarus", "Estonia", "Lithuania"];
+// console.log(neighbours);
 
-neighbours.push("Utopia");
-console.log(neighbours);
+// neighbours.push("Utopia");
+// console.log(neighbours);
 
-neighbours.pop();
-console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
 
-if (!neighbours.includes("Germany")) {
-    console.log("Probably not a central European country :D");
-}
+// if (!neighbours.includes("Germany")) {
+//     console.log("Probably not a central European country :D");
+// }
 
-neighbours[neighbours.indexOf("Estonia")] = "Russia";
-console.log(neighbours);
+// neighbours[neighbours.indexOf("Estonia")] = "Russia";
+// console.log(neighbours);
 
-console.log(
-    "Section 3: Assignment for Lecture 40. Basic Array Operations (Methods) ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 40. Basic Array Operations (Methods) ends here"
+// );
