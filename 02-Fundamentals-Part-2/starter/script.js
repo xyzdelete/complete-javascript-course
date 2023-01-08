@@ -178,3 +178,40 @@
 // console.log(ages);
 
 // console.log("Section 3: Lecture 39. Introduction to Arrays ends here");
+
+console.log(
+    "Section 3: Lecture 40. Basic Array Operations (Methods) starts here"
+);
+
+// Add elements
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+// Remove elements
+friends.unshift("John");
+console.log(friends);
+friends.pop(); // Last
+const popped = friends.pop(); // Last
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // first
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+    console.log("You have a friend called Steven");
+}
+
+console.log(
+    "Section 3: Lecture 40. Basic Array Operations (Methods) ends here"
+);

@@ -88,31 +88,31 @@
 //     "Section 3: Assignment for Lecture 36. Functions Calling Other Functions ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture 39. Introduction to Arrays starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 39. Introduction to Arrays starts here"
+// );
 
-const populations = [11, 12, 13, 15];
+// const populations = [11, 12, 13, 15];
 
-if (populations.length === 4) {
-    console.log(true);
-} else {
-    console.log(false);
-}
+// if (populations.length === 4) {
+//     console.log(true);
+// } else {
+//     console.log(false);
+// }
 
-function percentageOfWorld1(population) {
-    return (population / 8000) * 100;
-}
+// function percentageOfWorld1(population) {
+//     return (population / 8000) * 100;
+// }
 
-const percentages = [
-    percentageOfWorld1(populations[0]),
-    percentageOfWorld1(populations[1]),
-    percentageOfWorld1(populations[2]),
-    percentageOfWorld1(populations[3]),
-];
+// const percentages = [
+//     percentageOfWorld1(populations[0]),
+//     percentageOfWorld1(populations[1]),
+//     percentageOfWorld1(populations[2]),
+//     percentageOfWorld1(populations[3]),
+// ];
 
-console.log(percentages);
+// console.log(percentages);
 
-console.log(
-    "Section 3: Assignment for Lecture 39. Introduction to Arrays ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 39. Introduction to Arrays ends here"
+// );
