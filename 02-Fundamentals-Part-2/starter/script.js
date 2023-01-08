@@ -85,24 +85,24 @@
 
 // console.log("Section 3: Lecture 35. Arrow Functions ends here");
 
-console.log(
-    "Section 3: Lecture 36. Functions Calling Other Functions starts here"
-);
+// console.log(
+//     "Section 3: Lecture 36. Functions Calling Other Functions starts here"
+// );
 
-function cutFruitPieces(fruit) {
-    return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
 
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges);
+// function fruitProcessor(apples, oranges) {
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
 
-    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
-    return juice;
-}
+//     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+//     return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
 
-console.log(
-    "Section 3: Lecture 36. Functions Calling Other Functions ends here"
-);
+// console.log(
+//     "Section 3: Lecture 36. Functions Calling Other Functions ends here"
+// );

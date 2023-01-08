@@ -68,3 +68,22 @@
 // console.log("Section 3: Assignment for Lecture 35. Arrow Functions ends here");
 
 // console.log("Section 3: Assignment for Lecture 35. Arrow Functions ends here");
+
+console.log(
+    "Section 3: Assignment for Lecture 36. Functions Calling Other Functions starts here"
+);
+
+function describePopulation(country, population) {
+    const percentageOfWorld3 = (population) => (population / 8000) * 100;
+    return `${country} has ${population} million people, which is about ${percentageOfWorld3(
+        population
+    )} of the world.`;
+}
+
+console.log(describePopulation("Latvia", 1.5));
+console.log(describePopulation("Rome", 14));
+console.log(describePopulation("Russia", 140));
+
+console.log(
+    "Section 3: Assignment for Lecture 36. Functions Calling Other Functions ends here"
+);
