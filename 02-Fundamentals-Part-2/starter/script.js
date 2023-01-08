@@ -235,3 +235,44 @@
 // };
 
 // console.log("Section 3: Lecture 42. Introduction to Objects ends here");
+
+console.log("Section 3: Lecture 43. Dot vs. Bracket Notation starts here");
+
+const arturs = {
+    firstName: "Arturs",
+    lastName: "Anikins",
+    age: 2037 - 2000,
+    job: "programmer",
+    friends: ["Michael", "Peter", "Steven"],
+};
+
+console.log(arturs);
+
+console.log(arturs.lastName);
+console.log(arturs["lastName"]);
+
+const nameKey = "Name";
+console.log(arturs["first" + nameKey]);
+console.log(arturs["last" + nameKey]);
+
+const interestedIn = prompt(
+    "What do you want to know about Arturs? Choose between firstName, lastName, age, job and friends"
+);
+
+arturs.location = "Portugal";
+arturs["twitter"] = "@0";
+if (arturs[interestedIn]) {
+    console.log(arturs[interestedIn]);
+} else {
+    console.log(
+        "Wrong request! Choose between firstName, lastName, age, job and friends"
+    );
+}
+
+// Challenge
+// Arturs has 3 friends, and his friend is called Michael
+console.log(
+    `${arturs.firstName} has ${arturs.friends.length} friends, and his best friend is called ${arturs.friends[0]}`
+);
+
+console.log("Section 3: Lecture 43. Dot vs. Bracket Notation ends here");
