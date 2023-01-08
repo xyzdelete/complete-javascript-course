@@ -15,29 +15,29 @@
 
 // console.log("Section 3: Lecture 32. Activating Strict Mode ends here");
 
-console.log("Section 3: Lecture 33. Functions starts here");
+// console.log("Section 3: Lecture 33. Functions starts here");
 
-function logger() {
-    console.log("My name is Arturs");
-}
+// function logger() {
+//     console.log("My name is Arturs");
+// }
 
-// Calling / running / invoking function
-logger();
-logger();
-logger();
+// // Calling / running / invoking function
+// logger();
+// logger();
+// logger();
 
-function fruitProcessor(apples, oranges) {
-    console.log(apples, oranges);
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
-    return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//     console.log(apples, oranges);
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+//     return juice;
+// }
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
 
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
 
-const num = Number("23");
+// const num = Number("23");
 
-console.log("Section 3: Lecture 33. Functions ends here");
+// console.log("Section 3: Lecture 33. Functions ends here");
