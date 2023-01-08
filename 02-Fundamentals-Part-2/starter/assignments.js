@@ -140,3 +140,19 @@
 // console.log(
 //     "Section 3: Assignment for Lecture 40. Basic Array Operations (Methods) ends here"
 // );
+
+console.log(
+    "Section 3: Assignment for Lecture 42. Introduction to Objects starts here"
+);
+
+const myCountry = {
+    country: "Germany",
+    capital: "Berlin",
+    language: "German",
+    population: 80,
+    neighbours: ["France", "Switzerland"],
+};
+
+console.log(
+    "Section 3: Assignment for Lecture 42. Introduction to Objects ends here"
+);
