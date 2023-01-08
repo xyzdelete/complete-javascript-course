@@ -41,3 +41,27 @@
 // const num = Number("23");
 
 // console.log("Section 3: Lecture 33. Functions ends here");
+
+console.log(
+    "Section 3: Lecture 34. Function Declarations vs. Expressions starts here"
+);
+
+// Function declaration
+const age1 = calcAge1(1991);
+console.log(age1);
+
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+// Function expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+};
+
+const age2 = calcAge2(1991);
+console.log(age1, age2);
+
+console.log(
+    "Section 3: Lecture 34. Function Declarations vs. Expressions ends here"
+);
