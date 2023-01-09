@@ -31,32 +31,32 @@
 
 // console.log("Section 3: Lecture 41. Coding Challenge #2 ends here");
 
-console.log("Section 3: Lecture 45. Coding Challenge #3 starts here");
+// console.log("Section 3: Lecture 45. Coding Challenge #3 starts here");
 
-const Mark = {
-    fullname: "Mark Miller",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;
-        return this.BMI;
-    },
-};
+// const Mark = {
+//     fullname: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     },
+// };
 
-const John = {
-    fullname: "John Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;
-        return this.BMI;
-    },
-};
+// const John = {
+//     fullname: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     },
+// };
 
-console.log(
-    Mark.calcBMI() > John.calcBMI()
-        ? `Mark's BMI (${Mark.BMI}) is higher than John's (${John.BMI})`
-        : `John's BMI (${John.BMI}) is higher than Mark's (${Mark.BMI})`
-);
+// console.log(
+//     Mark.calcBMI() > John.calcBMI()
+//         ? `Mark's BMI (${Mark.BMI}) is higher than John's (${John.BMI})`
+//         : `John's BMI (${John.BMI}) is higher than Mark's (${Mark.BMI})`
+// );
 
-console.log("Section 3: Lecture 45. Coding Challenge #3 ends here");
+// console.log("Section 3: Lecture 45. Coding Challenge #3 ends here");

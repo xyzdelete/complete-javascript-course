@@ -320,3 +320,12 @@
 // console.log(arturs.getSummary());
 
 // console.log("Section 3: Lecture 44. Object Methods ends here");
+
+console.log("Section 3: Lecture 46. Iteration: The for Loop starts here");
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+console.log("Section 3: Lecture 46. Iteration: The for Loop ends here");
