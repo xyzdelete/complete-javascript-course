@@ -238,3 +238,24 @@
 // console.log(
 //     "Section 3: Assignment for Lecture 46. Iteration: The for Loop ends here"
 // );
+
+console.log(
+    "Section 3: Assignment for Lecture 47. Looping Arrays, Breaking and Continuing starts here"
+);
+
+const populations = [11, 12, 13, 15];
+const percentages2 = [];
+
+function percentageOfWorld1(population) {
+    return (population / 8000) * 100;
+}
+
+for (let i = 0; i < populations.length; i++) {
+    percentages2.push(percentageOfWorld1(populations[i]));
+}
+
+console.log(percentages2);
+
+console.log(
+    "Section 3: Assignment for Lecture 47. Looping Arrays, Breaking and Continuing ends here"
+);

@@ -330,57 +330,57 @@
 
 // console.log("Section 3: Lecture 46. Iteration: The for Loop ends here");
 
-console.log(
-    "Section 3: Lecture 47. Looping Arrays, Breaking and Continuing starts here"
-);
+// console.log(
+//     "Section 3: Lecture 47. Looping Arrays, Breaking and Continuing starts here"
+// );
 
-const artursArray = [
-    "Arturs",
-    "Anikins",
-    2037 - 1991,
-    "programmer",
-    ["Michael", "Peter", "Steven"],
-    true,
-];
+// const artursArray = [
+//     "Arturs",
+//     "Anikins",
+//     2037 - 1991,
+//     "programmer",
+//     ["Michael", "Peter", "Steven"],
+//     true,
+// ];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < artursArray.length; i++) {
-    // Reading from array
-    console.log(artursArray[i], typeof artursArray[i]);
+// for (let i = 0; i < artursArray.length; i++) {
+//     // Reading from array
+//     console.log(artursArray[i], typeof artursArray[i]);
 
-    // Filling types array
-    // types[i] = typeof artursArray[i];
-    types.push(typeof artursArray[i]);
-}
+//     // Filling types array
+//     // types[i] = typeof artursArray[i];
+//     types.push(typeof artursArray[i]);
+// }
 
-console.log(types);
+// console.log(types);
 
-const years = [1991, 2007, 1969, 2020];
+// const years = [1991, 2007, 1969, 2020];
 
-const ages = [];
+// const ages = [];
 
-for (let i = 0; i < years.length; i++) {
-    ages.push(2037 - years[i]);
-}
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i]);
+// }
 
-console.log(ages);
+// console.log(ages);
 
-// continue and break
+// // continue and break
 
-console.log("=== ONLY STRINGS ===");
-for (let i = 0; i < artursArray.length; i++) {
-    if (typeof artursArray[i] !== "string") continue;
+// console.log("=== ONLY STRINGS ===");
+// for (let i = 0; i < artursArray.length; i++) {
+//     if (typeof artursArray[i] !== "string") continue;
 
-    console.log(artursArray[i], typeof artursArray[i]);
-}
+//     console.log(artursArray[i], typeof artursArray[i]);
+// }
 
-for (let i = 0; i < artursArray.length; i++) {
-    if (typeof artursArray[i] === "number") break;
+// for (let i = 0; i < artursArray.length; i++) {
+//     if (typeof artursArray[i] === "number") break;
 
-    console.log(artursArray[i], typeof artursArray[i]);
-}
+//     console.log(artursArray[i], typeof artursArray[i]);
+// }
 
-console.log(
-    "Section 3: Lecture 47. Looping Arrays, Breaking and Continuing ends here"
-);
+// console.log(
+//     "Section 3: Lecture 47. Looping Arrays, Breaking and Continuing ends here"
+// );
