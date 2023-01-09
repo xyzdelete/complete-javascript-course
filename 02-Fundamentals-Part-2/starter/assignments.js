@@ -193,36 +193,36 @@
 //     "Section 3: Assignment for Lecture 43. Dot vs. Bracket Notation ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture Lecture 44. Object Methods starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture Lecture 44. Object Methods starts here"
+// );
 
-const myCountry = {
-    country: "Germany",
-    capital: "Berlin",
-    language: "german",
-    population: 80,
-    neighbours: ["France", "Switzerland"],
-    describe: function () {
-        console.log(
-            `${this.country} has ${this["population"] - 2} million ${
-                this.language
-            }-speaking people, ${
-                this.neighbours.length
-            } neighbouring countries and a capital called ${this.capital}.`
-        );
-    },
+// const myCountry = {
+//     country: "Germany",
+//     capital: "Berlin",
+//     language: "german",
+//     population: 80,
+//     neighbours: ["France", "Switzerland"],
+//     describe: function () {
+//         console.log(
+//             `${this.country} has ${this["population"] - 2} million ${
+//                 this.language
+//             }-speaking people, ${
+//                 this.neighbours.length
+//             } neighbouring countries and a capital called ${this.capital}.`
+//         );
+//     },
 
-    checkIsland: function () {
-        return this.neighbours.length === 0
-            ? (this.isIsland = true)
-            : (this.isIsland = false);
-    },
-};
+//     checkIsland: function () {
+//         return this.neighbours.length === 0
+//             ? (this.isIsland = true)
+//             : (this.isIsland = false);
+//     },
+// };
 
-myCountry.describe();
-console.log(myCountry.checkIsland());
+// myCountry.describe();
+// console.log(myCountry.checkIsland());
 
-console.log(
-    "Section 3: Assignment for Lecture Lecture 44. Object Methods ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture Lecture 44. Object Methods ends here"
+// );
