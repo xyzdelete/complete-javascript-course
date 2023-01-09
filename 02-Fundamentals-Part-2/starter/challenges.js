@@ -60,3 +60,32 @@
 // );
 
 // console.log("Section 3: Lecture 45. Coding Challenge #3 ends here");
+
+console.log("Section 3: Lecture 50. Coding Challenge #4 starts here");
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+console.log(`Bills array: ${bills}`);
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+}
+console.log(`Tips array: ${tips}`);
+console.log(`Totals array: ${totals}`);
+console.log(`Average of total: ${calcAverage(totals)}`);
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log("Section 3: Lecture 50. Coding Challenge #4 ends here");
