@@ -277,46 +277,46 @@
 
 // console.log("Section 3: Lecture 43. Dot vs. Bracket Notation ends here");
 
-console.log("Section 3: Lecture 44. Object Methods starts here");
+// console.log("Section 3: Lecture 44. Object Methods starts here");
 
-const arturs = {
-    firstName: "Arturs",
-    lastName: "Anikins",
-    birthYear: 1991,
-    job: "programmer",
-    friends: ["Michael", "Peter", "Steven"],
-    hasDriversLicense: true,
-    // calcAge: function (birthYear) {
-    //     return 2037 - birthYear;
-    // },
+// const arturs = {
+//     firstName: "Arturs",
+//     lastName: "Anikins",
+//     birthYear: 1991,
+//     job: "programmer",
+//     friends: ["Michael", "Peter", "Steven"],
+//     hasDriversLicense: true,
+//     // calcAge: function (birthYear) {
+//     //     return 2037 - birthYear;
+//     // },
 
-    // calcAge: function () {
-    //     // console.log(this);
-    //     return 2037 - this.birthYear;
-    // },
+//     // calcAge: function () {
+//     //     // console.log(this);
+//     //     return 2037 - this.birthYear;
+//     // },
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
 
-    getSummary: function () {
-        return `${this.firstName} is a ${this.calcAge()}-years old ${
-            this.job
-        }, and he ${
-            this.hasDriversLicense ? "has a" : "has no"
-        } driver's license`;
-    },
-};
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()}-years old ${
+//             this.job
+//         }, and he ${
+//             this.hasDriversLicense ? "has a" : "has no"
+//         } driver's license`;
+//     },
+// };
 
-console.log(arturs.calcAge());
+// console.log(arturs.calcAge());
 
-console.log(arturs.age);
-console.log(arturs.age);
-console.log(arturs.age);
+// console.log(arturs.age);
+// console.log(arturs.age);
+// console.log(arturs.age);
 
-// Challenge
-// "Arturs is a 46-years old programmer, and he has a/no driver's license"
-console.log(arturs.getSummary());
+// // Challenge
+// // "Arturs is a 46-years old programmer, and he has a/no driver's license"
+// console.log(arturs.getSummary());
 
-console.log("Section 3: Lecture 44. Object Methods ends here");
+// console.log("Section 3: Lecture 44. Object Methods ends here");
