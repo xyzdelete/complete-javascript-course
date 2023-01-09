@@ -260,22 +260,22 @@
 //     "Section 3: Assignment for Lecture 47. Looping Arrays, Breaking and Continuing ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture 48. Looping Backwards and Loops in Loops starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 48. Looping Backwards and Loops in Loops starts here"
+// );
 
-const listOfNeighbours = [
-    ["Canada", "Mexico"],
-    ["Spain"],
-    ["Norway", "Sweden", "Russia"],
-];
+// const listOfNeighbours = [
+//     ["Canada", "Mexico"],
+//     ["Spain"],
+//     ["Norway", "Sweden", "Russia"],
+// ];
 
-for (let i = 0; i < listOfNeighbours.length; i++) {
-    for (let j = 0; j < listOfNeighbours[i].length; j++) {
-        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
-    }
-}
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//     for (let j = 0; j < listOfNeighbours[i].length; j++) {
+//         console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+//     }
+// }
 
-console.log(
-    "Section 3: Assignment for Lecture 48. Looping Backwards and Loops in Loops ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 48. Looping Backwards and Loops in Loops ends here"
+// );
