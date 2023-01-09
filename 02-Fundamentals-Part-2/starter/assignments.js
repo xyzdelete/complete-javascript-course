@@ -227,14 +227,14 @@
 //     "Section 3: Assignment for Lecture 44. Object Methods ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture 46. Iteration: The for Loop starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 46. Iteration: The for Loop starts here"
+// );
 
-for (let voter = 1; voter <= 50; voter++) {
-    console.log(`Voter number ${voter} is currently voting`);
-}
+// for (let voter = 1; voter <= 50; voter++) {
+//     console.log(`Voter number ${voter} is currently voting`);
+// }
 
-console.log(
-    "Section 3: Assignment for Lecture 46. Iteration: The for Loop ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 46. Iteration: The for Loop ends here"
+// );
