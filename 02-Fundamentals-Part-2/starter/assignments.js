@@ -157,38 +157,38 @@
 //     "Section 3: Assignment for Lecture 42. Introduction to Objects ends here"
 // );
 
-console.log(
-    "Section 3: Assignment for Lecture 43. Dot vs. Bracket Notation starts here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 43. Dot vs. Bracket Notation starts here"
+// );
 
-const myCountry = {
-    country: "Germany",
-    capital: "Berlin",
-    language: "german",
-    population: 80,
-    neighbours: ["France", "Switzerland"],
-};
+// const myCountry = {
+//     country: "Germany",
+//     capital: "Berlin",
+//     language: "german",
+//     population: 80,
+//     neighbours: ["France", "Switzerland"],
+// };
 
-console.log(
-    `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
-);
+// console.log(
+//     `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+// );
 
-console.log(
-    `${myCountry.country} has ${myCountry.population + 2} million ${
-        myCountry.language
-    }-speaking people, ${
-        myCountry.neighbours.length
-    } neighbouring countries and a capital called ${myCountry.capital}.`
-);
+// console.log(
+//     `${myCountry.country} has ${myCountry.population + 2} million ${
+//         myCountry.language
+//     }-speaking people, ${
+//         myCountry.neighbours.length
+//     } neighbouring countries and a capital called ${myCountry.capital}.`
+// );
 
-console.log(
-    `${myCountry.country} has ${myCountry["population"] - 2} million ${
-        myCountry.language
-    }-speaking people, ${
-        myCountry.neighbours.length
-    } neighbouring countries and a capital called ${myCountry.capital}.`
-);
+// console.log(
+//     `${myCountry.country} has ${myCountry["population"] - 2} million ${
+//         myCountry.language
+//     }-speaking people, ${
+//         myCountry.neighbours.length
+//     } neighbouring countries and a capital called ${myCountry.capital}.`
+// );
 
-console.log(
-    "Section 3: Assignment for Lecture 43. Dot vs. Bracket Notation ends here"
-);
+// console.log(
+//     "Section 3: Assignment for Lecture 43. Dot vs. Bracket Notation ends here"
+// );
