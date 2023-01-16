@@ -41,47 +41,58 @@ const restaurant = {
             `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
         );
     },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(
+            `Here is your delecious pasta with ${ing1}, ${ing2} and ${ing3}`
+        );
+    },
 };
 
-restaurant.orderDelivery({
-    time: "22:30",
-    address: "Via del Sole, 21",
-    mainIndex: 2,
-    starterIndex: 2,
-});
+const arr = [7, 8, 9];
 
-restaurant.orderDelivery({
-    address: "Via del Sole, 21",
-    starterIndex: 2,
-});
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+console.log(badNewArr);
 
-const {
-    name: restaurantName,
-    openingHours: hours,
-    categories: tags,
-} = restaurant;
+const newArr = [1, 2, ...arr];
+console.log(newArr);
 
-console.log(restaurantName, hours, tags);
+console.log(...newArr);
 
-// Default values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+const newMenu = [...restaurant.mainMenu, "Gnocci"];
+console.log(newMenu);
 
-// Mutating variables
-let a = 111;
-let b = 999;
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
 
-const obj = { a: 23, b: 7, c: 14 };
+// Join 2 arrays
 
-({ a, b } = obj);
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
 
-console.log(a, b);
+// Iterables: array, strings, maps, sets. NOT objects
+const str = "Arturs";
+const letters = [...str, " ", "S."];
+console.log(...str);
 
-// Nested objects
-const {
-    fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// Real world example
+const ingredients = [
+    // prompt("Let's make pasta! Ingredient 1?"),
+    // prompt("Let's make pasta! Ingredient 2?"),
+    // prompt("Let's make pasta! Ingredient 3?"),
+];
+
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+
+restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: "Guiseppe" };
+
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = "Ristorante Roma";
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
