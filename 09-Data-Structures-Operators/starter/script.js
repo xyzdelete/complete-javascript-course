@@ -1,81 +1,28 @@
 "use strict";
 
-const game = {
-    team1: "Bayern Munich",
-    team2: "Borrussia Dortmund",
-    players: [
-        [
-            "Neuer",
-            "Pavard",
-            "Martinez",
-            "Alaba",
-            "Davies",
-            "Kimmich",
-            "Goretzka",
-            "Coman",
-            "Muller",
-            "Gnarby",
-            "Lewandowski",
-        ],
-        [
-            "Burki",
-            "Schulz",
-            "Hummels",
-            "Akanji",
-            "Hakimi",
-            "Weigl",
-            "Witsel",
-            "Hazard",
-            "Brandt",
-            "Sancho",
-            "Gotze",
-        ],
-    ],
-    score: "4:0",
-    scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-    date: "Nov 9th, 2037",
-    odds: {
-        team1: 1.33,
-        x: 3.25,
-        team2: 6.5,
-    },
-};
+const ordersSet = new Set(["Pasta", "Pizza", "Risotto", "Pasta", "Pizza"]);
+console.log(ordersSet);
 
-// 1)
+console.log(new Set("Jonas"));
 
-for (let i = 0; i < game.scored.length; i++) {
-    console.log(`Goal ${i + 1}: ${game.scored[i]}`);
-}
+console.log(ordersSet.size);
 
-// 2)
-let sum = 0;
-console.log(Object.entries(game.odds));
-for (const [i, value] of Object.entries(game.odds)) {
-    sum += value;
-    console.log(i, value);
-}
-console.log(sum);
-const average = sum / Object.entries(game.odds).length;
-console.log(`Average: ${average}`);
+console.log(ordersSet.has("Pizza"));
+console.log(ordersSet.has("Bread"));
+ordersSet.add("Garlic Bread");
+ordersSet.add("Garlic Bread");
+ordersSet.delete("Risotto");
+// ordersSet.clear();
+console.log(ordersSet);
 
-// 3)
+for (const order of ordersSet) console.log(order);
 
-for (const [i, value] of Object.entries(game.odds)) {
-    game[i] ?? console.log(`Odd of draw: ${value}`);
-    game[i] && console.log(`Odd of victory ${game[i]}: ${value}`);
-}
+// Example
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+console.log(
+    new Set(["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"]).size
+);
 
-// 4)
-let scorers = {};
-console.log(game.scored);
-for (let i = 0; i < game.scored.length; i++) {
-    let goals = 1;
-    let scoredName = game.scored[i];
-    scorers[scoredName] = goals;
-    for (let j = 0; j < game.scored.length; j++) {
-        if (scoredName === game.scored[j] && i != j) {
-            scorers[scoredName] = ++goals;
-        }
-    }
-}
-console.log(scorers);
+console.log(new Set("Arturs").size);
