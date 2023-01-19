@@ -1,30 +1,17 @@
 "use strict";
 
-document.body.append(document.createElement("textarea"));
-document.body.append(document.createElement("button"));
+const flights =
+    "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
-const btn = document.querySelector("button");
-console.log(btn);
-const textarea = document.querySelector("textarea");
-console.log(textarea);
+const getCode = (str) => str.slice(0, 3).toUpperCase();
 
-btn.addEventListener("click", function () {
-    let text = textarea.value
-        .trim()
-        .toLowerCase()
-        .replaceAll(" ", "")
-        .split("\n");
-    console.log(text);
-
-    let tick = "✅";
-    for (const subStr of text) {
-        const s = subStr.slice(subStr.indexOf("_")).replaceAll("_", "");
-        const camelStr = s.replace(s[0], s[0].toUpperCase());
-
-        const finalStr =
-            (subStr.slice(0, subStr.indexOf("_")) + camelStr).padEnd(20, " ") +
-            tick;
-        console.log(finalStr);
-        tick += "✅";
-    }
-});
+for (const flight of flights.split("+")) {
+    const [type, from, to, time] = flight.split(";");
+    const output = `${type.startsWith("_Delayed") ? "⛔" : ""}${type.replaceAll(
+        "_",
+        " "
+    )} ${getCode(from)} ${getCode(to)} (${time.replace(":", "h")})`.padStart(
+        45
+    );
+    console.log(output);
+}
