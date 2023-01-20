@@ -1,33 +1,31 @@
 "use strict";
 
-const flight = "LH234";
-const arturs = {
-    name: "Arturs Anikins",
-    passport: 12312321,
+const oneWord = function (str) {
+    return str.replaceAll(" ", "").toLowerCase();
 };
 
-const checkIn = function (flightNum, passenger) {
-    flightNum = "LH999";
-    passenger.name = "Mr. " + passenger.name;
-
-    if (passenger.passport === 12312321) {
-        alert("Check in");
-    } else {
-        alert("Wrong passport!");
-    }
+const upperFirstWord = function (str) {
+    const [first, ...others] = str.split(" ");
+    return [first.toUpperCase(), ...others].join(" ");
 };
 
-// checkIn(flight, arturs);
-// console.log(flight);
-// console.log(arturs);
+// Higher-order function
+const transformer = function (str, fn) {
+    console.log(`Original string: ${str}`);
+    console.log(`Transformed string: ${fn(str)}`);
 
-// Is the same as doing...
-// const flightNum = flight;
-// const passenger = arturs;
-
-const newPassport = function (person) {
-    person.passport = Math.random() * 100000000;
+    console.log(`Transformed by: ${fn.name}`);
 };
 
-newPassport(arturs);
-checkIn(flight, arturs);
+transformer("JavaScript is the best!", upperFirstWord);
+
+transformer("JavaScript is the best!", oneWord);
+
+// JS uses callbacks all the time
+const high5 = function () {
+    console.log("😊");
+};
+
+document.body.addEventListener("click", high5);
+
+["Arturs", "Martha", "Adam"].forEach(high5);
