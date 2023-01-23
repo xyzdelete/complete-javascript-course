@@ -82,20 +82,34 @@ displayMovements(account1.movements);
 
 console.log(containerMovements.innerHTML);
 
+function calcDisplayBalance(movements) {
+    const balance = movements.reduce((acc, cur, i, arr) => acc + cur, 0);
+    labelBalance.textContent = `${balance} EUR`;
+}
+calcDisplayBalance(account1.movements);
+
+function createUsernames(accs) {
+    accs.forEach(function (acc) {
+        acc.username = acc.owner
+            .toLowerCase()
+            .split(" ")
+            .map((user) => user[0])
+            .join("");
+    });
+}
+
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const deposits = movements.filter((mov) => mov > 0);
-console.log(movements);
-console.log(deposits);
+// Maximum value
+const max = movements.reduce((acc, mov) => {
+    if (acc > mov) {
+        return acc;
+    } else {
+        return mov;
+    }
+}, movements[0]);
 
-const depositsFor = [];
-for (const mov of movements) {
-    if (mov > 0) depositsFor.push(mov);
-}
-console.log(depositsFor);
-const withdrawals = movements.filter((mov) => mov < 0);
-console.log(withdrawals);
-
+console.log(max);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
