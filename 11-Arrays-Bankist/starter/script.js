@@ -88,6 +88,27 @@ function calcDisplayBalance(movements) {
 }
 calcDisplayBalance(account1.movements);
 
+function calcDisplaySummary(movements) {
+    const incomes = movements
+        .filter((mov) => mov > 0)
+        .reduce((acc, mov) => acc + mov, 0);
+    labelSumIn.textContent = `${incomes}€`;
+
+    const out = movements
+        .filter((mov) => mov < 0)
+        .reduce((acc, mov) => acc + mov);
+    labelSumOut.textContent = `${Math.abs(out)}€`;
+
+    const interest = movements
+        .filter((mov) => mov > 0)
+        .map((deposit) => deposit * 0.012)
+        .filter((interest, i, arr) => interest >= 1)
+        .reduce((acc, interest) => acc + interest);
+
+    labelSumInterest.textContent = `${interest}€`;
+}
+calcDisplaySummary(account1.movements);
+
 function createUsernames(accs) {
     accs.forEach(function (acc) {
         acc.username = acc.owner
@@ -110,6 +131,19 @@ const max = movements.reduce((acc, mov) => {
 }, movements[0]);
 
 console.log(max);
+
+const eurToUsd = 1.1;
+
+// PIPELINE
+const totalDepositsUSD = movements
+    .filter((mov) => mov > 0)
+    // .map((mov, i, arr) => mov * eurToUsd)
+    .map((mov, i, arr) => {
+        // console.log(arr);
+        return mov * eurToUsd;
+    })
+    .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositsUSD);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
