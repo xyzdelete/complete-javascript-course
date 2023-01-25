@@ -61,7 +61,7 @@ const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
-const displayMovements = function (movements) {
+function displayMovements(movements) {
     containerMovements.innerHTML = ``;
 
     movements.forEach(function (mov, i) {
@@ -77,37 +77,37 @@ const displayMovements = function (movements) {
         `;
         containerMovements.insertAdjacentHTML("afterbegin", html);
     });
-};
-displayMovements(account1.movements);
+}
+// displayMovements(account1.movements);
 
-console.log(containerMovements.innerHTML);
+// console.log(containerMovements.innerHTML);
 
 function calcDisplayBalance(movements) {
     const balance = movements.reduce((acc, cur, i, arr) => acc + cur, 0);
     labelBalance.textContent = `${balance} EUR`;
 }
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(account1.movements);
 
-function calcDisplaySummary(movements) {
-    const incomes = movements
+function calcDisplaySummary(acc) {
+    const incomes = acc.movements
         .filter((mov) => mov > 0)
         .reduce((acc, mov) => acc + mov, 0);
-    labelSumIn.textContent = `${incomes}€`;
+    labelSumIn.textContent = `${incomes} €`;
 
-    const out = movements
+    const out = acc.movements
         .filter((mov) => mov < 0)
         .reduce((acc, mov) => acc + mov);
-    labelSumOut.textContent = `${Math.abs(out)}€`;
+    labelSumOut.textContent = `${Math.abs(out)} €`;
 
-    const interest = movements
+    const interest = acc.movements
         .filter((mov) => mov > 0)
-        .map((deposit) => deposit * 0.012)
+        .map((deposit) => (deposit * acc.interestRate) / 100)
         .filter((interest, i, arr) => interest >= 1)
         .reduce((acc, interest) => acc + interest);
 
-    labelSumInterest.textContent = `${interest}€`;
+    labelSumInterest.textContent = `${interest} €`;
 }
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 
 function createUsernames(accs) {
     accs.forEach(function (acc) {
@@ -118,52 +118,39 @@ function createUsernames(accs) {
             .join("");
     });
 }
+createUsernames(accounts);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// Event handler
+let currentAccount;
 
-// Maximum value
-const max = movements.reduce((acc, mov) => {
-    if (acc > mov) {
-        return acc;
-    } else {
-        return mov;
+btnLogin.addEventListener("click", function (e) {
+    // Prevent form from submitting
+    e.preventDefault();
+
+    currentAccount = accounts.find(
+        (acc) => acc.username === inputLoginUsername.value
+    );
+    console.log(currentAccount);
+
+    if (currentAccount?.pin === Number(inputLoginPin.value)) {
+        // Display UI and welcome
+        labelWelcome.textContent = `Welcome back, ${
+            currentAccount.owner.split(" ")[0]
+        }`;
+        containerApp.style.opacity = 100;
+        // Display movements
+        displayMovements(currentAccount.movements);
+        // Clear input fields
+        inputLoginUsername.value = inputLoginPin.value = "";
+        inputLoginPin.blur();
+
+        // Display balance
+        calcDisplayBalance(currentAccount.movements);
+        // Display summary
+        calcDisplaySummary(currentAccount);
+        console.log("LOGIN");
     }
-}, movements[0]);
-
-console.log(max);
-
-const eurToUsd = 1.1;
-
-// PIPELINE
-const totalDepositsUSD = movements
-    .filter((mov) => mov > 0)
-    // .map((mov, i, arr) => mov * eurToUsd)
-    .map((mov, i, arr) => {
-        // console.log(arr);
-        return mov * eurToUsd;
-    })
-    .reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsUSD);
-
-const firstWithdrawal = movements.find((mov) => mov < 0);
-
-console.log(movements);
-console.log(firstWithdrawal);
-
-console.log(accounts);
-
-const account = accounts.find((acc) => acc.owner === "Jessica Davis");
-console.log(account);
-
-// let accountX = {};
-// for (const acc of accounts) {
-//     if (acc.owner === "Jessica Davis") {
-//         accountX = acc;
-//         break;
-//     }
-// }
-
-// console.log(accountX);
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
