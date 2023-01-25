@@ -144,6 +144,27 @@ const totalDepositsUSD = movements
     })
     .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
+
+const firstWithdrawal = movements.find((mov) => mov < 0);
+
+console.log(movements);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+const account = accounts.find((acc) => acc.owner === "Jessica Davis");
+console.log(account);
+
+// let accountX = {};
+// for (const acc of accounts) {
+//     if (acc.owner === "Jessica Davis") {
+//         accountX = acc;
+//         break;
+//     }
+// }
+
+// console.log(accountX);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
