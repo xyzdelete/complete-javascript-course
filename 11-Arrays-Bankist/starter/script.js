@@ -241,36 +241,56 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // /////////////////////////////////////////////////
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
-console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+// 1.
+const bankDepositSum = accounts
+    .flatMap((acc) => acc.movements)
+    .filter((deposits) => deposits > 0)
+    .reduce((acc, deposits) => acc + deposits, 0);
+console.log(bankDepositSum);
 
-// Empty arrays + fill method
-const x = new Array(7);
-console.log(x);
+// 2.
+const numDeposits1000 = accounts
+    .flatMap((acc) => acc.movements)
+    .reduce((acc, cur) => (cur >= 1000 ? ++acc : acc), 0);
 
-x.fill(1, 3, 5);
-x.fill(1);
-console.log(x);
+console.log(numDeposits1000);
 
-arr.fill(23, 2, 6);
+// 3.
+const { deposits, widthdrawals } = accounts
+    .flatMap((acc) => acc.movements)
+    .reduce(
+        (sums, cur) => {
+            // cur > 0 ? (sums.deposits += cur) : (sums.widthdrawals += cur);
 
-console.log(arr);
+            sums[cur > 0 ? "deposits" : "widthdrawals"] += cur;
 
-// Array.from
-const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
-
-const z = Array.from({ length: 7 }, (_, i) => i + 1);
-
-console.log(z);
-
-labelBalance.addEventListener("click", function () {
-    const movementsUI = Array.from(
-        document.querySelectorAll(".movements__value"),
-        (el) => Number(el.textContent.replace("€", ""))
+            return sums;
+        },
+        { deposits: 0, widthdrawals: 0 }
     );
-    console.log(movementsUI);
 
-    let movementsUI2 = [...document.querySelectorAll(".movements__value")];
-    console.log(movementsUI2);
-});
+console.log(deposits, widthdrawals);
+
+// 4.
+// this is a nice title -> This Is a Nice Title
+function convertTitleCase(title) {
+    function capitalize(str) {
+        return str[0].toUpperCase() + str.slice(1);
+    }
+
+    const exceptions = ["a", "an", "the", "and", "but", "or", "in", "with"];
+
+    const titleCase = title
+        .toLowerCase()
+        .split(" ")
+        .map((word) =>
+            exceptions.includes(word)
+                ? word
+                : word[0].toUpperCase() + word.slice(1)
+        );
+    return capitalize(titleCase.join(" "));
+}
+
+console.log(convertTitleCase("this is a nice title"));
+console.log(convertTitleCase("this is a LONG title but not too long"));
+console.log(convertTitleCase("and here is another title with an EXAMPLE"));
