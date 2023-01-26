@@ -237,60 +237,6 @@ btnSort.addEventListener("click", function (e) {
 //     ["GBP", "Pound sterling"],
 // ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // /////////////////////////////////////////////////
-
-// 1.
-const bankDepositSum = accounts
-    .flatMap((acc) => acc.movements)
-    .filter((deposits) => deposits > 0)
-    .reduce((acc, deposits) => acc + deposits, 0);
-console.log(bankDepositSum);
-
-// 2.
-const numDeposits1000 = accounts
-    .flatMap((acc) => acc.movements)
-    .reduce((acc, cur) => (cur >= 1000 ? ++acc : acc), 0);
-
-console.log(numDeposits1000);
-
-// 3.
-const { deposits, widthdrawals } = accounts
-    .flatMap((acc) => acc.movements)
-    .reduce(
-        (sums, cur) => {
-            // cur > 0 ? (sums.deposits += cur) : (sums.widthdrawals += cur);
-
-            sums[cur > 0 ? "deposits" : "widthdrawals"] += cur;
-
-            return sums;
-        },
-        { deposits: 0, widthdrawals: 0 }
-    );
-
-console.log(deposits, widthdrawals);
-
-// 4.
-// this is a nice title -> This Is a Nice Title
-function convertTitleCase(title) {
-    function capitalize(str) {
-        return str[0].toUpperCase() + str.slice(1);
-    }
-
-    const exceptions = ["a", "an", "the", "and", "but", "or", "in", "with"];
-
-    const titleCase = title
-        .toLowerCase()
-        .split(" ")
-        .map((word) =>
-            exceptions.includes(word)
-                ? word
-                : word[0].toUpperCase() + word.slice(1)
-        );
-    return capitalize(titleCase.join(" "));
-}
-
-console.log(convertTitleCase("this is a nice title"));
-console.log(convertTitleCase("this is a LONG title but not too long"));
-console.log(convertTitleCase("and here is another title with an EXAMPLE"));
