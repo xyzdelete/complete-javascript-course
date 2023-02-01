@@ -1,30 +1,45 @@
 "use strict";
 
-const PersonProto = {
-    calcAge() {
-        console.log(2037 - this.birthYear);
-    },
+class Account {
+    constructor(owner, currency, pin) {
+        this.owner = owner;
+        this.currency = currency;
+        this.pin = pin;
+        this.movements = [];
+        this.locale = navigator.language;
 
-    init(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    },
-};
+        console.log(`Thanks for opening an account, ${owner}`);
+    }
 
-const steven = Object.create(PersonProto);
+    // Public interface
+    deposit(val) {
+        this.movements.push(val);
+    }
 
-const StudentProto = Object.create(PersonProto);
-StudentProto.init = function (firstName, birthYear, course) {
-    PersonProto.init.call(this, firstName, birthYear);
-    this.course = course;
-};
+    withdraw(val) {
+        this.deposit(-val);
+    }
 
-StudentProto.introduce = function () {
-    console.log(`My name is ${this.fullName} and I study ${this.course}`);
-};
+    approveLoan(val) {
+        return true;
+    }
 
-const jay = Object.create(StudentProto);
-jay.init("Jay", 2010, "CS");
-console.dir(jay);
-jay.introduce();
-jay.calcAge();
+    requestLoan(val) {
+        if (this.approveLoan(val)) {
+            this.deposit(val);
+            console.log(`Loan approved`);
+        }
+    }
+}
+
+const acc1 = new Account("Jonas", "EUR", 1111);
+
+// acc1.movements.push(250);
+// acc1.movements.push(-250);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1.requestLoan(1000);
+acc1.approveLoan(1000);
+
+console.log(acc1);
+console.log(acc1.pin);
