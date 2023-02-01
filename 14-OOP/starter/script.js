@@ -1,24 +1,38 @@
 "use strict";
 
-const PersonProto = {
-    calcAge() {
-        console.log(2037 - this.birthYear);
-    },
+console.log("Coding Challenge #2");
 
-    init(firstName, birthYear) {
-        this.firstName = firstName;
-        this.birthYear = birthYear;
-    },
-};
+class CarCl {
+    constructor(make, speed) {
+        this.make = make;
+        this.speed = speed;
+    }
 
-const steven = Object.create(PersonProto);
-console.log(steven);
-steven.name = "Steven";
-steven.birthYear = 2002;
-steven.calcAge();
+    get speedUS() {
+        // km/h to mi/h
+        return this.speed / 1.6;
+    }
 
-console.log(steven.__proto__ === PersonProto);
+    set speedUS(speed) {
+        // convert mi/h to km/h and store it
+        this.speed = speed * 1.6;
+    }
 
-const sarah = Object.create(PersonProto);
-sarah.init("Sarah", 1979);
-sarah.calcAge();
+    accelerate() {
+        console.log(`${this.make} going at ${(this.speed += 10)} km/h`);
+    }
+    brake() {
+        console.log(`${this.make} going at ${(this.speed -= 5)} km/h`);
+    }
+}
+
+const car1 = new CarCl("Ford", 120);
+console.log(car1.speed);
+console.log(car1.speedUS);
+console.log((car1.speedUS = 120));
+console.log(car1.speed);
+car1.accelerate();
+console.log(car1.speed);
+car1.accelerate();
+console.log(car1.speed);
+car1.brake();
