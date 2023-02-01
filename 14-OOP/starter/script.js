@@ -1,81 +1,69 @@
 "use strict";
 
-// Public fields
-// Private fields
-// Public methods
-// Private methods
-// (there is also the static version)
+console.log("Coding Challenge #4");
 
-class Account {
-    // 1) Public fields (instances)
-    locale = navigator.language;
-    // 2) Private fields (instances)
-    #movements = [];
-    #pin;
-    // 3) Public methods
-    constructor(owner, currency, pin) {
-        this.owner = owner;
-        this.currency = currency;
-        this.#pin = pin;
-        // Protected property
-        // this._movements = [];
-        // this.locale = navigator.language;
-
-        console.log(`Thanks for opening an account, ${owner}`);
+class CarCl {
+    constructor(make, speed) {
+        this.make = make;
+        // km/h
+        this.speed = speed;
+    }
+    accelerate() {
+        console.log(`${this.make} going at ${(this.speed += 10)} km/h`);
+    }
+    brake() {
+        console.log(`${this.make} going at ${(this.speed -= 5)} km/h`);
+    }
+    get speedUS() {
+        return this.speed / 1.6;
     }
 
-    // Public interface
-    getMovements() {
-        return this.#movements;
-    }
-
-    deposit(val) {
-        this.#movements.push(val);
-        return this;
-    }
-
-    withdraw(val) {
-        this.deposit(-val);
-        return this;
-    }
-
-    requestLoan(val) {
-        if (this._approveLoan(val)) {
-            this.deposit(val);
-            console.log(`Loan approved`);
-        }
-        return this;
-    }
-
-    // 4) Private methods
-    // #approveLoan(val) {
-    _approveLoan(val) {
-        return true;
-    }
-
-    static helper() {
-        console.log("Helper");
+    set speedUS(speed) {
+        this.speed = speed * 1.6;
     }
 }
 
-const acc1 = new Account("Jonas", "EUR", 1111);
+class EVCl extends CarCl {
+    #charge;
+    constructor(make, speed, charge) {
+        super(make, speed);
+        this.#charge = charge;
+    }
+    accelerate() {
+        this.speed += 20;
+        this.#charge -= 1;
+        console.log(
+            `${this.make} going at ${this.speed} km/h, with a charge of ${
+                this.#charge
+            } %`
+        );
+        return this;
+    }
+    brake() {
+        this.speed -= 5;
+        this.#charge -= 1;
+        console.log(
+            `${this.make} going at ${this.speed} km/h, with a charge of ${
+                this.#charge
+            } %`
+        );
+        return this;
+    }
+    chargeBattery(chargeTo) {
+        this.#charge = chargeTo;
+        return this;
+    }
 
-// acc1._movements.push(250);
-// acc1._movements.push(-250);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.requestLoan(1000);
+    getCharge() {
+        return this.#charge;
+    }
+}
 
-console.log(acc1.getMovements());
-
-console.log(acc1);
-console.log(acc1.pin);
-Account.helper();
-
-// console.log(acc1.#movements);
-// console.log(acc.#pin);
-// console.log(acc1.#approveLoan(100));
-
-// Chaining
-acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
-console.log(acc1.getMovements());
+const car = new EVCl("Rivian", 120, 23);
+console.log(car.make);
+console.log(car.speed);
+console.log(car.getCharge());
+car.chargeBattery(50);
+console.log(car.getCharge());
+car.accelerate().accelerate().brake().brake();
+console.log(car.speedUS);
