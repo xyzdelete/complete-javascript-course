@@ -1,38 +1,35 @@
 "use strict";
 
-console.log("Coding Challenge #2");
+const Person = function (firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+};
 
-class CarCl {
-    constructor(make, speed) {
-        this.make = make;
-        this.speed = speed;
-    }
+Person.prototype.calcAge = function () {
+    console.log(2037 - this.birthYear);
+};
 
-    get speedUS() {
-        // km/h to mi/h
-        return this.speed / 1.6;
-    }
+const Student = function (firstName, birthYear, course) {
+    Person.call(this, firstName, birthYear);
+    this.course = course;
+};
 
-    set speedUS(speed) {
-        // convert mi/h to km/h and store it
-        this.speed = speed * 1.6;
-    }
+// Linking prototypes
+Student.prototype = Object.create(Person.prototype);
 
-    accelerate() {
-        console.log(`${this.make} going at ${(this.speed += 10)} km/h`);
-    }
-    brake() {
-        console.log(`${this.make} going at ${(this.speed -= 5)} km/h`);
-    }
-}
+Student.prototype.introduce = function () {
+    console.log(`My name is ${this.firstName} and I study at ${this.course}`);
+};
 
-const car1 = new CarCl("Ford", 120);
-console.log(car1.speed);
-console.log(car1.speedUS);
-console.log((car1.speedUS = 120));
-console.log(car1.speed);
-car1.accelerate();
-console.log(car1.speed);
-car1.accelerate();
-console.log(car1.speed);
-car1.brake();
+const mike = new Student("Mike", 2020, "Computer Science");
+console.log(mike);
+mike.introduce();
+
+mike.calcAge();
+console.log(mike.__proto__.__proto__);
+
+console.log(mike instanceof Student);
+console.log(mike instanceof Person);
+
+Student.prototype.constructor = Student;
+console.dir(Student.prototype.constructor);
