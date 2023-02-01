@@ -1,46 +1,64 @@
 "use strict";
 
-console.log("Coding Challenge #3");
+// class declaration
+class PersonCl {
+    constructor(fullName, birthYear) {
+        this.fullName = fullName;
+        this.birthYear = birthYear;
+    }
 
-function Car(make, speed) {
-    this.make = make;
-    // km/h
-    this.speed = speed;
+    // Methods will be added to .prototype property
+    calcAge() {
+        console.log(2037 - this.birthYear);
+    }
+
+    greet() {
+        console.log(`Hey ${this.fullName}`);
+    }
+
+    get age() {
+        return 2037 - this.birthYear;
+    }
+
+    set fullName(name) {
+        console.log(name);
+        if (name.includes(" ")) this._fullName = name;
+        else alert(`${name} is not a full name`);
+    }
+
+    // Set a property that already exists
+    get fullName() {
+        return this._fullName;
+    }
+
+    // Static method
+    static hey() {
+        console.log("Hey there");
+    }
 }
 
-Car.prototype.accelerate = function () {
-    console.log(`${this.make} going at ${(this.speed += 10)} km/h`);
-};
+class StudentCl extends PersonCl {
+    constructor(fullName, birthYear, course) {
+        // Always needs to happen first!
+        super(fullName, birthYear, course);
+        this.course = course;
+    }
 
-Car.prototype.brake = function () {
-    console.log(`${this.make} going at ${(this.speed -= 5)} km/h`);
-};
+    introduce() {
+        console.log(`My name is ${this.fullName} and I study ${this.course}`);
+    }
 
-function EV(make, speed, charge) {
-    Car.call(this, make, speed);
-    this.charge = charge;
+    calcAge() {
+        console.log(
+            `I'm ${
+                2037 - this.birthYear
+            } years old, but as a student I fell more like ${
+                2037 - this.birthYear + 10
+            }`
+        );
+    }
 }
 
-EV.prototype = Object.create(Car.prototype);
-EV.prototype.chargeBattery = function (chargeTo) {
-    this.charge = chargeTo;
-};
-
-EV.prototype.accelerate = function () {
-    this.speed += 20;
-    this.charge -= 1;
-    console.log(
-        `${this.make} going at ${this.speed} km/h, with a charge of ${this.charge} %`
-    );
-};
-
-const carTesla = new EV("Tesla", 120, 23);
-console.log(carTesla.make);
-console.log(carTesla.speed);
-console.log(carTesla.charge);
-carTesla.chargeBattery(50);
-console.log(carTesla.charge);
-carTesla.accelerate();
-carTesla.accelerate();
-carTesla.accelerate();
-carTesla.brake();
+const martha = new StudentCl("Martha Jones", 2012, "CS");
+martha.introduce();
+martha.calcAge();
